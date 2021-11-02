@@ -82,7 +82,7 @@ class SoundVisualizerView(context: Context , attrs: AttributeSet? = null) : View
         }
 
     }
-
+    //
     fun startVisualizing(isReplaying:Boolean) {
 
         this.isReplaying = isReplaying
