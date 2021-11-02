@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <com.example.basic_ch07_audiorecorder.SoundVisualizerView
+        android:id="@+id/SoundVisualizerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@id/recordTimeTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/resetBtn"
         android:layout_width="wrap_content"
@@ -16,11 +26,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/recordBtn" />
 
-    <TextView
+    <com.example.basic_ch07_audiorecorder.CountUpTextView
         android:id="@+id/recordTimeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
+        android:textColor="@color/white"
         android:text="00"
         app:layout_constraintBottom_toTopOf="@id/recordBtn"
         app:layout_constraintEnd_toEndOf="@id/recordBtn"
@@ -29,7 +40,11 @@
     <com.example.basic_ch07_audiorecorder.RecordButton
         android:id="@+id/recordBtn"
         android:layout_width="100dp"
+        tools:src="@drawable/ic_record"
         android:layout_height="100dp"
+        android:scaleType="fitCenter"
+        android:padding="30dp"
+        android:background="@drawable/shape_oval_btn"
         android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
